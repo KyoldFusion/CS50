@@ -14,9 +14,12 @@
 
 .navbar-brand {
     filter: invert(100%);
-    float: left;
-    display: none;
-    
+    display: inline-block;
+    top: 0;
+    right: 0;
+    padding: 0px 5px;
+    z-index: 1;
+    max-height: 44px;
 }
 
 .navbar {
@@ -64,8 +67,35 @@ ul:hover {
     color: white;
 }
 
-@media  (min-width: 60%) {
+@media  (min-width: 301px) {
     .navbar-brand {
-        display: block;
+        display: inline-block;
+        text-align: relative;
+        margin: 0 auto;
+        
+    }
+}
+
+@media (min-width: 1024px) {
+    .navbar-brand {
+        display: none;
+        margin: 0 auto;
+    }
+}
+
+@media (min-width: 301px) {
+    #PageTags {
+        display: none;
+    }
+}
+
+@media (min-width: 1024px) {
+    #PageTags {
+        display: inline-block;
+    }
+}
+@media (min-width: 300px) {
+    .navbar {
+        height: 50px;
     }
 }
